@@ -165,9 +165,9 @@ namespace FinalLab
 
         private void textBoxBusqueda_TextChanged(object sender, EventArgs e)
         {
+            listBoxWoa.Items.Clear();
             if (Caracteres(textBoxBusqueda.Text) == true)
             {
-                listBoxWoa.Items.Clear();
                 foreach (Persona actor in BaseDeDatos.GetPersonas())
                 {
                     if (actor.GetNombre().ToLower().IndexOf(textBoxBusqueda.Text.ToLower()) != -1)

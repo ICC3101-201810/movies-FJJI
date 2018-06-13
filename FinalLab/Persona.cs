@@ -34,5 +34,9 @@ namespace FinalLab
         { 
             fechaNacimiento = DateTime.Parse(MyString, MyCultureInfo);
         }
+        public void SetBiografia(string bio)
+        {
+            biografia = bio;
+        }
     }
 }

@@ -11,6 +11,7 @@ namespace FinalLab
     {
         public Director(string nombre, string apellido) : base(nombre, apellido)
         {
+
         }
     }
 }

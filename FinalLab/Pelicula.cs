@@ -15,10 +15,16 @@ namespace FinalLab
         string Descripcion;
         int presupuesto;
         Estudio estudio;
+        List<Critica> criticas;
 
         public Pelicula(string nombre)
         {
             this.nombre = nombre;
+        }
+
+        public void AddCritica(string emisor, string contenido)
+        {
+            criticas.Add(new Critica(emisor, contenido));
         }
         public string GetNombre()
         {
