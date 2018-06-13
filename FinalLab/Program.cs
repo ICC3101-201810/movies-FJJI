@@ -14,7 +14,17 @@ namespace FinalLab
         [STAThread]
         static void Main()
         {
-
+            Director director = new Director("Anthony", "Rousso");
+            BaseDeDatos.AddPersona(director);
+            Pelicula ave = new Pelicula("Avengers: Infinity War");
+            foreach (Persona per in BaseDeDatos.GetPersonas())
+            {
+                if (per.GetApellido() == "Rousso")
+                {
+                    PeliculaActor peli = new PeliculaActor(ave, (Director)per);
+                    BaseDeDatos.AddPeliculaActor(peli);
+                }
+            }
             serial.Cargar();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

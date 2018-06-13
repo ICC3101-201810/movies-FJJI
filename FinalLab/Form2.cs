@@ -174,6 +174,10 @@ namespace FinalLab
                     {
                         listBoxWoa.Items.Add(actor.GetNombre() + " " + actor.GetApellido());
                     }
+                    if (actor.GetApellido().ToLower().IndexOf(textBoxBusqueda.Text.ToLower()) != -1)
+                    {
+                        listBoxWoa.Items.Add(actor.GetNombre() + " " + actor.GetApellido());
+                    }
                 }
                 foreach (Estudio est in BaseDeDatos.GetEstudios())
                 {
