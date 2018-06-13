@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace FinalLab
 {
+    [Serializable()]
     abstract class Persona
     {
         string nombre;
         string apellido;
-        DateTime fechaNacimiento { get; set; }
-        string biografia { get; set; }
+        DateTime fechaNacimiento;
+        CultureInfo MyCultureInfo = new CultureInfo("es-CL");
+        string biografia;
 
         public Persona(string nombre, string apellido)
         {
@@ -21,11 +24,15 @@ namespace FinalLab
 
         public string GetNombre()
         {
-            return nombre
+            return nombre;
         }
         public string GetApellido()
         {
             return apellido;
+        }
+        public virtual void SetFechaNacimiento(string MyString)
+        { 
+            fechaNacimiento = DateTime.Parse(MyString, MyCultureInfo);
         }
     }
 }

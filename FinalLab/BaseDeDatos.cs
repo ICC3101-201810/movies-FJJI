@@ -9,11 +9,11 @@ namespace FinalLab
     [Serializable()]
     public static class BaseDeDatos
     {
-        static List<Pelicula> peliculas;
-        static List<Persona> personas;
-        static List<Estudio> estudios;
-        static List<PeliculaActor> peliculaActores;
-        static List<PeliculaProductor> peliculaProductores;
+        static List<Pelicula> peliculas = new List<Pelicula>();
+        static List<Persona> personas = new List<Persona>();
+        static List<Estudio> estudios = new List<Estudio>();
+        static List<PeliculaActor> peliculaActores = new List<PeliculaActor>();
+        static List<PeliculaProductor> peliculaProductores = new List<PeliculaProductor>();
 
         internal static List<Pelicula> GetPeliculas()
         {
@@ -41,7 +41,13 @@ namespace FinalLab
         }
         internal static void AddPersona(Persona persona)
         {
-            personas.Add(persona);
+            if (persona is Actor)
+                personas.Add((Actor)persona);
+            else if (persona is Productor)
+                personas.Add((Productor)persona);
+            else if (persona is Director)
+                personas.Add((Director)persona);
+
         }
         internal static void AddEstudio(Estudio estudio)
         {

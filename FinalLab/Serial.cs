@@ -77,48 +77,49 @@ namespace FinalLab
 
         public static void Guardar()
         {
-            // serializacion para guardado de datos 
-            //using (Stream stream = File.Open(@"..\data\DataAlumno.bin", FileMode.Create));
-            using (Stream stream = File.Open(@"..\..\data\DataPeliculaActores.bin", FileMode.Create))
-            {
-                List<PeliculaActor> peliculaActores = BaseDeDatos.GetPeliculaActores();
+                // serializacion para guardado de datos 
+                //using (Stream stream = File.Open(@"..\data\DataAlumno.bin", FileMode.Create));
+                using (Stream stream = File.Open(@"..\..\data\DataPeliculaActores.bin", FileMode.Create))
+                {
+                    List<PeliculaActor> peliculaActores = BaseDeDatos.GetPeliculaActores();
 
-                BinaryFormatter bin = new BinaryFormatter();
-                bin.Serialize(stream, peliculaActores);
-                stream.Close();
-            }
-            using (Stream stream = File.Open(@"..\..\data\DataPeliculaProductores.bin", FileMode.Create))
-            {
-                List<PeliculaProductor> peliculaProductores = BaseDeDatos.GetPeliculaProductores();
+                    BinaryFormatter bin = new BinaryFormatter();
+                    bin.Serialize(stream, peliculaActores);
+                    stream.Close();
+                }
+                using (Stream stream = File.Open(@"..\..\data\DataPeliculaProductores.bin", FileMode.Create))
+                {
+                    List<PeliculaProductor> peliculaProductores = BaseDeDatos.GetPeliculaProductores();
 
-                BinaryFormatter bin = new BinaryFormatter();
-                bin.Serialize(stream, peliculaProductores);
-                stream.Close();
-            }
-            using (Stream stream = File.Open(@"..\..\data\DataPeliculas.bin", FileMode.Create))
-            {
-                List<Pelicula> peliculas = BaseDeDatos.GetPeliculas();
+                    BinaryFormatter bin = new BinaryFormatter();
+                    bin.Serialize(stream, peliculaProductores);
+                    stream.Close();
+                }
+                using (Stream stream = File.Open(@"..\..\data\DataPeliculas.bin", FileMode.Create))
+                {
+                    List<Pelicula> peliculas = BaseDeDatos.GetPeliculas();
 
-                BinaryFormatter bin = new BinaryFormatter();
-                bin.Serialize(stream, peliculas);
-                stream.Close();
-            }
-            using (Stream stream = File.Open(@"..\..\data\DataPersonas.bin", FileMode.Create))
-            {
-                List<Persona> personas = BaseDeDatos.GetPersonas();
+                    BinaryFormatter bin = new BinaryFormatter();
+                    bin.Serialize(stream, peliculas);
+                    stream.Close();
+                }
+                using (Stream stream = File.Open(@"..\..\data\DataPersonas.bin", FileMode.Create))
+                {
+                    List<Persona> personas = BaseDeDatos.GetPersonas();
 
-                BinaryFormatter bin = new BinaryFormatter();
-                bin.Serialize(stream, personas);
-                stream.Close();
-            }
-            using (Stream stream = File.Open(@"..\..\data\DataEstudios.bin", FileMode.Create))
-            {
-                List<Estudio> estudios = BaseDeDatos.GetEstudios();
-                BinaryFormatter bin = new BinaryFormatter();
-                bin.Serialize(stream, estudios);
-                stream.Close();
-            }
-            //datos guardados 
+                    BinaryFormatter bin = new BinaryFormatter();
+                    bin.Serialize(stream, personas);
+                    stream.Close();
+                }
+                using (Stream stream = File.Open(@"..\..\data\DataEstudios.bin", FileMode.Create))
+                {
+                    List<Estudio> estudios = BaseDeDatos.GetEstudios();
+                    BinaryFormatter bin = new BinaryFormatter();
+                    bin.Serialize(stream, estudios);
+                    stream.Close();
+                }
+                //datos guardados 
+            
         }
     }
 }

@@ -9,3 +9,14 @@ C:\Users\Francisco\Desktop\Proyectos POO\FinalLab\FinalLab\bin\Debug\FinalLab.pd
 C:\Users\Francisco\Desktop\Proyectos POO\FinalLab\FinalLab\obj\Debug\FinalLab.exe
 C:\Users\Francisco\Desktop\Proyectos POO\FinalLab\FinalLab\obj\Debug\FinalLab.pdb
 C:\Users\Francisco\Desktop\Proyectos POO\FinalLab\FinalLab\obj\Debug\FinalLab.Form2.resources
+C:\Users\Francisco\Desktop\Proyectos POO\movies-FJJI\FinalLab\bin\Debug\FinalLab.exe.config
+C:\Users\Francisco\Desktop\Proyectos POO\movies-FJJI\FinalLab\bin\Debug\FinalLab.exe
+C:\Users\Francisco\Desktop\Proyectos POO\movies-FJJI\FinalLab\bin\Debug\FinalLab.pdb
+C:\Users\Francisco\Desktop\Proyectos POO\movies-FJJI\FinalLab\obj\Debug\FinalLab.csprojAssemblyReference.cache
+C:\Users\Francisco\Desktop\Proyectos POO\movies-FJJI\FinalLab\obj\Debug\FinalLab.Form1.resources
+C:\Users\Francisco\Desktop\Proyectos POO\movies-FJJI\FinalLab\obj\Debug\FinalLab.Form2.resources
+C:\Users\Francisco\Desktop\Proyectos POO\movies-FJJI\FinalLab\obj\Debug\FinalLab.Properties.Resources.resources
+C:\Users\Francisco\Desktop\Proyectos POO\movies-FJJI\FinalLab\obj\Debug\FinalLab.csproj.GenerateResource.cache
+C:\Users\Francisco\Desktop\Proyectos POO\movies-FJJI\FinalLab\obj\Debug\FinalLab.csproj.CoreCompileInputs.cache
+C:\Users\Francisco\Desktop\Proyectos POO\movies-FJJI\FinalLab\obj\Debug\FinalLab.exe
+C:\Users\Francisco\Desktop\Proyectos POO\movies-FJJI\FinalLab\obj\Debug\FinalLab.pdb

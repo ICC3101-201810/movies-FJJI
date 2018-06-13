@@ -12,5 +12,18 @@ namespace FinalLab
         string nombre;
         string direccion;
         DateTime fechaApertura;
+
+        public Estudio(string _nombre)
+        {
+            nombre = _nombre;
+        }
+        public string GetNombre()
+        {
+            return nombre;
+        }
+        public string GetDireccion()
+        {
+            return direccion;
+        }
     }
 }

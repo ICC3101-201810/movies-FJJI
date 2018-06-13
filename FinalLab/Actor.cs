@@ -12,5 +12,6 @@ namespace FinalLab
         public Actor(string nombre, string apellido) : base(nombre, apellido)
         {
         }
+
     }
 }
