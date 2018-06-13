@@ -14,6 +14,7 @@ namespace FinalLab
         [STAThread]
         static void Main()
         {
+
             serial.Cargar();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

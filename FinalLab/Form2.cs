@@ -86,7 +86,7 @@ namespace FinalLab
                             pasa = true;
                             continue;
                         }
-                        if (director.GetApellido().ToLower() == textBoxBusqueda.Text.ToLower())
+                        if (director.GetApellido().ToLower().IndexOf(textBoxBusqueda.Text.ToLower()) != -1)
                         {
                             listBoxWoa.Items.Add(director.GetNombre() + " " + director.GetApellido());
                             pasa = true;
@@ -190,9 +190,78 @@ namespace FinalLab
                     }
                 }
             }
+            valornum = 99; //evito que me entre sin apretar boton
 
         }
 
-        
+        private void listBoxWoa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string nombre;
+            string apellido;
+            Actor escogidoActor = null;
+            Director escogidoDirector = null;
+            Productor escogidoProductor = null;
+            try
+            {
+                if (valornum == 1) //si se seleccionó una actor
+                {
+                    foreach (Persona actor in BaseDeDatos.GetPersonas())
+                    {
+                        //if(ListBox.SelectedItem.ToString().Split(" ")[0] == actor.GetNombre() && ListBox.SelectedItem.ToString().Split(" ")[1] == actor.GetApellido())
+                        if (listBoxWoa.SelectedItem.ToString() == (actor.GetNombre() + " " + actor.GetApellido()))
+                        {
+                            escogidoActor = (Actor)actor;
+                            Form3 form3 = new Form3(escogidoActor);
+                            this.Hide();
+                            form3.ShowDialog();
+                            this.Show();
+
+                        }
+
+                    }
+
+                }
+                if (valornum == 2) //si se seleccionó una director
+                {
+                    foreach (Director director in BaseDeDatos.GetPersonas())
+                    {
+                        //if(ListBox.SelectedItem.ToString().Split(" ")[0] == actor.GetNombre() && ListBox.SelectedItem.ToString().Split(" ")[1] == actor.GetApellido())
+                        if (listBoxWoa.SelectedItem.ToString() == (director.GetNombre() + " " + director.GetApellido()))
+                        {
+                            escogidoDirector = (Director)director;
+                            Form3 form3 = new Form3(escogidoDirector);
+                            this.Hide();
+                            form3.ShowDialog();
+                            this.Show();
+                        }
+
+                    }
+
+                }
+                if (valornum == 3) //si se seleccionó una productor
+                {
+                    foreach (Productor productor in BaseDeDatos.GetPersonas())
+                    {
+                        //if(ListBox.SelectedItem.ToString().Split(" ")[0] == actor.GetNombre() && ListBox.SelectedItem.ToString().Split(" ")[1] == actor.GetApellido())
+                        if (listBoxWoa.SelectedItem.ToString() == (productor.GetNombre() + " " + productor.GetApellido()))
+                        {
+                            escogidoProductor = (Productor)productor;
+                            Form3 form3 = new Form3(escogidoProductor);
+                            this.Hide();
+                            form3.ShowDialog();
+                            this.Show();
+                        }
+
+                    }
+
+                }
+            }
+            catch
+            {
+
+            }
+            
+
+        }
     }
 }

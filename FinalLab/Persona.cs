@@ -38,5 +38,13 @@ namespace FinalLab
         {
             biografia = bio;
         }
+        public string GetFechaNacimiento()
+        {
+            return fechaNacimiento.ToString();
+        }
+        public string GetBiografia()
+        {
+            return biografia;
+        }
     }
 }

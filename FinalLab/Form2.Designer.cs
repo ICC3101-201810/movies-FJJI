@@ -124,6 +124,7 @@
             this.listBoxWoa.Name = "listBoxWoa";
             this.listBoxWoa.Size = new System.Drawing.Size(389, 251);
             this.listBoxWoa.TabIndex = 7;
+            this.listBoxWoa.SelectedIndexChanged += new System.EventHandler(this.listBoxWoa_SelectedIndexChanged);
             // 
             // Form2
             // 
