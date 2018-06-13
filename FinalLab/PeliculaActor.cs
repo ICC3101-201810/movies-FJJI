@@ -10,7 +10,24 @@ namespace FinalLab
     class PeliculaActor
     {
         Pelicula pelicula;
-        Actor actor;
+        List<Actor> actores;
+        Director director;
+
+        public PeliculaActor(Pelicula pelicula, Director director)
+        {
+            this.pelicula = pelicula;
+            this.director = director;
+        }
+
+        public void AddActor(Actor actor)
+        {
+            foreach (Actor a in actores)
+            {
+                if (a == actor)
+                    return;
+            }
+            actores.Add(actor);
+        }
 
     }
 }

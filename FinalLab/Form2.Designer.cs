@@ -105,6 +105,7 @@
             this.textBoxBusqueda.Name = "textBoxBusqueda";
             this.textBoxBusqueda.Size = new System.Drawing.Size(394, 20);
             this.textBoxBusqueda.TabIndex = 5;
+            this.textBoxBusqueda.TextChanged += new System.EventHandler(this.textBoxBusqueda_TextChanged);
             // 
             // botonSalir
             // 

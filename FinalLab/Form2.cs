@@ -17,12 +17,6 @@ namespace FinalLab
         {
             InitializeComponent();
             listBoxWoa.DisplayMember = "nombre";
-            int asd = 0;
-            while (asd < 30)
-            {
-                asd++;
-                listBoxWoa.Items.Add(asd.ToString());
-            }
         }
 
         private void buttonPeliculas_Click(object sender, EventArgs e)
@@ -168,5 +162,37 @@ namespace FinalLab
             serial.Guardar();
             Environment.Exit(0);
         }
+
+        private void textBoxBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            if (Caracteres(textBoxBusqueda.Text) == true)
+            {
+                listBoxWoa.Items.Clear();
+                foreach (Persona actor in BaseDeDatos.GetPersonas())
+                {
+                    if (actor.GetNombre().ToLower().IndexOf(textBoxBusqueda.Text.ToLower()) != -1)
+                    {
+                        listBoxWoa.Items.Add(actor.GetNombre() + " " + actor.GetApellido());
+                    }
+                }
+                foreach (Estudio est in BaseDeDatos.GetEstudios())
+                {
+                    if (est.GetNombre().ToLower().IndexOf(textBoxBusqueda.Text.ToLower()) != -1)
+                    {
+                        listBoxWoa.Items.Add(est.GetNombre());
+                    }
+                }
+                foreach (Pelicula peli in BaseDeDatos.GetPeliculas())
+                {
+                    if (peli.GetNombre().ToLower().IndexOf(textBoxBusqueda.Text.ToLower()) != -1)
+                    {
+                        listBoxWoa.Items.Add(peli.GetNombre());
+                    }
+                }
+            }
+
+        }
+
+        
     }
 }

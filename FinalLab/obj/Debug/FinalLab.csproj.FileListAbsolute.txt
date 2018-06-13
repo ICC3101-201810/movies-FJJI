@@ -20,3 +20,4 @@ C:\Users\Francisco\Desktop\Proyectos POO\movies-FJJI\FinalLab\obj\Debug\FinalLab
 C:\Users\Francisco\Desktop\Proyectos POO\movies-FJJI\FinalLab\obj\Debug\FinalLab.csproj.CoreCompileInputs.cache
 C:\Users\Francisco\Desktop\Proyectos POO\movies-FJJI\FinalLab\obj\Debug\FinalLab.exe
 C:\Users\Francisco\Desktop\Proyectos POO\movies-FJJI\FinalLab\obj\Debug\FinalLab.pdb
+C:\Users\Francisco\Desktop\Proyectos POO\movies-FJJI\FinalLab\obj\Debug\FinalLab.Form3.resources
